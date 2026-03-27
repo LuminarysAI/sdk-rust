@@ -1,0 +1,20 @@
+[package]
+name = "luminarys-sdk"
+version = "0.2.0"
+edition = "2021"
+description = "Rust SDK for building Luminarys WASM skills"
+license = "MIT"
+repository = "https://github.com/LuminarysAI/sdk-rust"
+homepage = "https://luminarys.ai"
+readme = "README.md"
+keywords = ["luminarys", "ai-agent", "webassembly", "mcp", "sandbox"]
+categories = ["wasm", "api-bindings"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+rmp-serde = "1.3"
+rmpv = { version = "1.3", features = ["with-serde"] }
+serde = { version = "1", features = ["derive"] }
+serde_bytes = "0.11.19"
